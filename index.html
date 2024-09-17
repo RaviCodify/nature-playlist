@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hybrid Player</title>
+    <!-- Bootstrap CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom style sheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Songs List -->
+    <div
+      class="container mx-auto mb-3 p-4 rounded d-flex justify-content-between align-items-stretch"
+    >
+      <!-- Songs details -->
+      <div class="left-container">
+        <h2
+          class="text-light fw-bold bg-secondary px-4 py-2 rounded-pill d-inline"
+        >
+          Nature's Playlist
+        </h2>
+        <div class="song-list list-group text-dark rounded"></div>
+      </div>
+      <!-- Song cover image -->
+      <div class="right-container"></div>
+    </div>
+
+    <!-- Music control -->
+    <div class="music-body px-3 py-2 mx-auto rounded-pill w-75">
+      <!-- Timer -->
+      <div class="timer">
+        <div class="audio-time d-flex justify-content-between px-3 pt-3">
+          <div class="current-time fw-bold">00:00</div>
+          <div class="audio-duration fw-bold">00:00</div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div
+          class="progress bg-dark"
+          role="progressbar"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="height: 5px"
+        >
+          <div class="progress-bar"></div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div
+        class="buttons d-flex justify-content-center align-items-center my-2"
+      >
+        <button class="prev btn btn-dark text-light" style="border-radius: 50%">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+        <button
+          class="play btn btn-dark fs-4 text-light px-3 py-2 mx-2"
+          style="border-radius: 50%"
+        >
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="next btn btn-dark text-light" style="border-radius: 50%">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Javascript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
